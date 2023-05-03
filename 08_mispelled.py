@@ -10,4 +10,33 @@
 #   word1, word2 = 'versed', 'applb' # returns False
 #   word1, word2 = '1versed', 'versed' # returns True
 #   word1, word2 = 'versed', 'versed' # returns True
+def check_spelling():
+    # Вводим слова
+    word1 = input("Первое слово: ")
+    word2 = input("Второе слово: ")
+    
+    # Проверяем случай, когда слова совпадают
+    if word1 == word2:
+        return True
+    
+    # Проверяем случай, когда слова отличаются более чем на один символ
+    if abs(len(word1) - len(word2)) >= 2:
+        return False
+    
+    # Проверяем случай, когда слова отличаются на один символ
+    if abs(len(word1) - len(word2)) == 1:
+        if word1.startswith(word2) or word2.startswith(word1):
+            return True
+        if word1.endswith(word2) or word2.endswith(word1):
+            return True
+        return False
+    
+    # Проверяем случай, когда слова отличаются на один символ в середине
+    count = 0
+    for i in range(len(word1)):
+        if word1[i] != word2[i]:
+            count += 1
+        if count > 1:
+            return False
+    return True
 
