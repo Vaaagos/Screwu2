@@ -19,4 +19,3 @@ def get_day_of_week(num):
 num = int(input("Введите номер дня недели от 1 до 7: "))
 result = get_day_of_week(num)
 print(result)
-
