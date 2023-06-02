@@ -1,0 +1,9 @@
+geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"]
+birds = ["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "Blue Swedish"]
+
+filtered_birds = []
+for bird in birds:
+    if bird not in geese:
+        filtered_birds.append(bird)
+
+print(filtered_birds)
