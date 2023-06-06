@@ -10,3 +10,6 @@ birds = ["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "B
 
 filtered_birds = filter_birds(birds, geese)
 print(filtered_birds)
+
+# добавить расшириение файла .py
+# выложить через git
